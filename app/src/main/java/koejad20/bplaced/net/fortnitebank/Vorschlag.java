@@ -37,6 +37,9 @@ public class Vorschlag {
 
                 try {
                     throw new Kernel();
+                    //throw new Kernel();
+                    //throw new Kernel();
+                    //throw new Kernel();
                 } catch (RuntimeException e) {
                     System.err.println(e.getMessage());
                 }

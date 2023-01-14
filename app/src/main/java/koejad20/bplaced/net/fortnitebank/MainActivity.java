@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         kernel = findViewById(R.id.iv_kernel);
         kernel.setLayoutManager(new LinearLayoutManager(this.getSus()));
         if(!MainActivity.schonGecalled) {
-            MainActivity.accounts = dATASTAGE.fortnitecharacters(this.getSus(), "account_filesofcharge.csv");
+            MainActivity.accounts = dATASTAGE.fortniteCharacters(this.getSus(), "account_filesofcharge.csv");
             MainActivity.schonGecalled = true;
         }
         FortniteSeasons = new FortniteToChildAdapter(this.getSus(), MainActivity.accounts);

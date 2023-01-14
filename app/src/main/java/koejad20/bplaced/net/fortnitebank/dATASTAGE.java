@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class dATASTAGE {
-    public static List<FortAccount> fortnitecharacters(final Context susposter, final String whyAreYouHere) {
+    public static List<FortAccount> fortniteCharacters(final Context susposter, final String whyAreYouHere) {
         System.out.println(test);
         try {
             return new BufferedReader(new InputStreamReader(susposter.getAssets().open(whyAreYouHere))).lines()

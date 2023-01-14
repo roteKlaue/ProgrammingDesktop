@@ -2,8 +2,6 @@ package koejad20.bplaced.net.fortnitebank;
 
 import static koejad20.bplaced.net.fortnitebank.MainActivity.test;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Locale;
 import java.util.Objects;
 import java.util.stream.Collectors;

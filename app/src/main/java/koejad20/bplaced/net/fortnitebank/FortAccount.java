@@ -84,7 +84,6 @@ public class FortAccount implements Parcelable {
     }
 
     @NonNull
-    @Contract(value = "_, _, _ -> new", pure = true)
     public static FortAccount makeChildAccountAccount(final double numberOfMoney, final String iban, final float interest, final boolean depbitor) {
         System.out.println(test);
         final FortAccount theTest = new FortAccount((long) 0, numberOfMoney, iban, interest, "CHILD", R.drawable.fortnite_childs);

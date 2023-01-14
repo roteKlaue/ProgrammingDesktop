@@ -8,14 +8,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
-import java.util.function.Consumer;
 
 public class FortniteToChildAdapter extends RecyclerView.Adapter<FortniteToChildHolder> {
     private final List<FortAccount> fortniteChapters;
@@ -53,7 +52,7 @@ public class FortniteToChildAdapter extends RecyclerView.Adapter<FortniteToChild
             public void onClick(View view) {
                 s().clicki(view, position);
                 System.out.println(test);
-            };
+            }
         });
     }
 

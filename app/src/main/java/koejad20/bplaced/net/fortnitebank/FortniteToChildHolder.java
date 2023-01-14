@@ -2,8 +2,6 @@ package koejad20.bplaced.net.fortnitebank;
 
 import static koejad20.bplaced.net.fortnitebank.MainActivity.test;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
