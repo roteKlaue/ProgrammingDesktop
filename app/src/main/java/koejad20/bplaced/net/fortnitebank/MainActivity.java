@@ -8,6 +8,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private RecyclerView kernel;
     protected Context sus = this;
@@ -19,7 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         kernel = findViewById(R.id.iv_kernel);
         kernel.setLayoutManager(new LinearLayoutManager(this.getSus()));
-        FortniteSeasons = new FortniteToChildAdapter(this.getSus(), dATASTAGE.fortnitecharacters(this.getSus(), "account_filesofcharge.csv"));
+        if(!MainActivity.schonGecalled) {
+            MainActivity.accounts = dATASTAGE.fortnitecharacters(this.getSus(), "account_filesofcharge.csv");
+            MainActivity.schonGecalled = true;
+        }
+        FortniteSeasons = new FortniteToChildAdapter(this.getSus(), MainActivity.accounts);
         FortniteSeasons.tRUE = true;
         FortniteSeasons.tRUE = false;
         Toast.makeText(this, test.toString(), Toast.LENGTH_SHORT).show();
@@ -36,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static final TempForFlorian test = new TempForFlorian();
+
+    public static List<FortAccount> accounts;
+    public static boolean schonGecalled = false;
 }
 
 class TempForFlorian {

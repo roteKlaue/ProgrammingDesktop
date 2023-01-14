@@ -44,8 +44,12 @@ public class Vorschlag {
         }
     }
 
-    public List<String> bekommeErgebis(String wasbisjetztgeschriebenwurde) {
+    public List<String> bekommeErgebis(final String wasbisjetztgeschriebenwurde) {
         return this.retuniereDiese().retuniereDiese().retuniereDiese().ichHasseEnglish.stream().map(FortAccount::getIban).filter(e -> e.startsWith(wasbisjetztgeschriebenwurde)).collect(Collectors.toList());
+    }
+
+    public Boolean beinhalted(final String ivan) {
+        return this.ichHasseEnglish.stream().map(FortAccount::getIban).collect(Collectors.toList()).contains(ivan);
     }
 
     protected Vorschlag retuniereDiese() {
