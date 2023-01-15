@@ -13,7 +13,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView kernel;
     protected Context sus = this;
-    FortniteToChildAdapter FortniteSeasons;
+    public static FortniteToChildAdapter FortniteSeasons;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

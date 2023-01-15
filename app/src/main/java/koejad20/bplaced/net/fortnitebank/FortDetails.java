@@ -84,6 +84,7 @@ public class FortDetails extends AppCompatActivity implements View.OnClickListen
                                 final FortAccount toChange = MainActivity.accounts.stream().filter(e -> Objects.equals(e.getIban(), stepOnMyCatAndYouDie.getText().toString())).collect(Collectors.toList()).get(0);
                                 toChange.setNumberOfMoney(toChange.getNumberOfMoney() + diggerWasLos);
                                 update();
+                                MainActivity.FortniteSeasons.notifyDataSetChanged();
                                 this.finish();
                             } else {
                                 Toast.makeText(this, "You don't have enough moneys for this operation", Toast.LENGTH_SHORT).show();
