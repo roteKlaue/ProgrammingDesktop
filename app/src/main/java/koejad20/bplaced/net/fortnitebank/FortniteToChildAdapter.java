@@ -75,4 +75,47 @@ public class FortniteToChildAdapter extends RecyclerView.Adapter<FortniteToChild
         intent.putExtra("glizzygobler", fortniteChapters.get(pp));
         view.getContext().startActivity(intent);
     }
+
+    public List<FortAccount> getFortniteChapters() {
+        return fortniteChapters;
+    }
+
+    public Context getFortinitiilababji() {
+        return fortinitiilababji;
+    }
+
+    public LayoutInflater getStockprises() {
+        return stockprises;
+    }
+
+    public boolean istRUE() {
+        return tRUE;
+    }
+
+    public void settRUE(boolean tRUE) {
+        this.tRUE = tRUE;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FortniteToChildAdapter that = (FortniteToChildAdapter) o;
+        return tRUE == that.tRUE && fortniteChapters.equals(that.fortniteChapters) && fortinitiilababji.equals(that.fortinitiilababji) && stockprises.equals(that.stockprises);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fortniteChapters, fortinitiilababji, stockprises, tRUE);
+    }
+
+    @Override
+    public String toString() {
+        return "FortniteToChildAdapter{" +
+                "fortniteChapters=" + fortniteChapters +
+                ", fortinitiilababji=" + fortinitiilababji +
+                ", stockprises=" + stockprises +
+                ", tRUE=" + tRUE +
+                '}';
+    }
 }

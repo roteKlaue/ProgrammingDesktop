@@ -2,6 +2,7 @@ package koejad20.bplaced.net.fortnitebank;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Vorschlag {
@@ -57,5 +58,33 @@ public class Vorschlag {
 
     protected Vorschlag retuniereDiese() {
         return this;
+    }
+
+    public List<FortAccount> getIchHasseEnglish() {
+        return ichHasseEnglish;
+    }
+
+    public void setIchHasseEnglish(List<FortAccount> ichHasseEnglish) {
+        this.ichHasseEnglish = ichHasseEnglish;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vorschlag)) return false;
+        Vorschlag vorschlag = (Vorschlag) o;
+        return getIchHasseEnglish().equals(vorschlag.getIchHasseEnglish());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIchHasseEnglish());
+    }
+
+    @Override
+    public String toString() {
+        return "Vorschlag{" +
+                "ichHasseEnglish=" + ichHasseEnglish +
+                '}';
     }
 }

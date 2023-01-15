@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.Contract;
 
+import java.util.Objects;
+
 public class FortAccount implements Parcelable {
     private final long overdraft;
     private double numberOfMoney;
@@ -114,5 +116,43 @@ public class FortAccount implements Parcelable {
         parcel.writeString(label);
         parcel.writeInt(idForMonkey);
         parcel.writeBoolean(isDebit);
+    }
+
+    public int getIdForMonkey() {
+        return idForMonkey;
+    }
+
+    public boolean isDebit() {
+        return isDebit;
+    }
+
+    public void setDebit(boolean debit) {
+        isDebit = debit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FortAccount that = (FortAccount) o;
+        return overdraft == that.overdraft && Double.compare(that.numberOfMoney, numberOfMoney) == 0 && Float.compare(that.interest, interest) == 0 && idForMonkey == that.idForMonkey && isDebit == that.isDebit && iban.equals(that.iban) && label.equals(that.label);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(overdraft, numberOfMoney, iban, interest, label, idForMonkey, isDebit);
+    }
+
+    @Override
+    public String toString() {
+        return "FortAccount{" +
+                "overdraft=" + overdraft +
+                ", numberOfMoney=" + numberOfMoney +
+                ", iban='" + iban + '\'' +
+                ", interest=" + interest +
+                ", label='" + label + '\'' +
+                ", idForMonkey=" + idForMonkey +
+                ", isDebit=" + isDebit +
+                '}';
     }
 }

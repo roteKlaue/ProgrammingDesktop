@@ -110,4 +110,131 @@ public class FortDetails extends AppCompatActivity implements View.OnClickListen
         max_moneys.setText(String.format(Locale.ENGLISH, "%.02f", (float) fart.getNumberOfMoney() + fart.getOverdraft()));
         iban.setText(fart.getIban());
     }
+
+    public ImageView getImg() {
+        return img;
+    }
+
+    public void setImg(ImageView img) {
+        this.img = img;
+    }
+
+    public TextView getMax_moneys() {
+        return max_moneys;
+    }
+
+    public void setMax_moneys(TextView max_moneys) {
+        this.max_moneys = max_moneys;
+    }
+
+    public TextView getCurrent_moneys() {
+        return current_moneys;
+    }
+
+    public void setCurrent_moneys(TextView current_moneys) {
+        this.current_moneys = current_moneys;
+    }
+
+    public TextView getIban() {
+        return iban;
+    }
+
+    public void setIban(TextView iban) {
+        this.iban = iban;
+    }
+
+    public TextView getType() {
+        return type;
+    }
+
+    public void setType(TextView type) {
+        this.type = type;
+    }
+
+    public TextView getOverdraft() {
+        return overdraft;
+    }
+
+    public void setOverdraft(TextView overdraft) {
+        this.overdraft = overdraft;
+    }
+
+    public Button getBack_to_bones() {
+        return back_to_bones;
+    }
+
+    public void setBack_to_bones(Button back_to_bones) {
+        this.back_to_bones = back_to_bones;
+    }
+
+    public Button getTransfer_the_moneys_to_robber() {
+        return transfer_the_moneys_to_robber;
+    }
+
+    public void setTransfer_the_moneys_to_robber(Button transfer_the_moneys_to_robber) {
+        this.transfer_the_moneys_to_robber = transfer_the_moneys_to_robber;
+    }
+
+    public Vorschlag getiHateGerman() {
+        return iHateGerman;
+    }
+
+    public void setiHateGerman(Vorschlag iHateGerman) {
+        this.iHateGerman = iHateGerman;
+    }
+
+    public AutoCompleteTextView getStepOnMyCatAndYouDie() {
+        return stepOnMyCatAndYouDie;
+    }
+
+    public void setStepOnMyCatAndYouDie(AutoCompleteTextView stepOnMyCatAndYouDie) {
+        this.stepOnMyCatAndYouDie = stepOnMyCatAndYouDie;
+    }
+
+    public EditText getTransfer_amount() {
+        return transfer_amount;
+    }
+
+    public void setTransfer_amount(EditText transfer_amount) {
+        this.transfer_amount = transfer_amount;
+    }
+
+    public FortAccount getFart() {
+        return fart;
+    }
+
+    public void setFart(FortAccount fart) {
+        this.fart = fart;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FortDetails that = (FortDetails) o;
+        return Objects.equals(img, that.img) && Objects.equals(max_moneys, that.max_moneys) && Objects.equals(current_moneys, that.current_moneys) && Objects.equals(iban, that.iban) && Objects.equals(type, that.type) && Objects.equals(overdraft, that.overdraft) && Objects.equals(back_to_bones, that.back_to_bones) && Objects.equals(transfer_the_moneys_to_robber, that.transfer_the_moneys_to_robber) && Objects.equals(iHateGerman, that.iHateGerman) && Objects.equals(stepOnMyCatAndYouDie, that.stepOnMyCatAndYouDie) && Objects.equals(transfer_amount, that.transfer_amount) && Objects.equals(fart, that.fart);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(img, max_moneys, current_moneys, iban, type, overdraft, back_to_bones, transfer_the_moneys_to_robber, iHateGerman, stepOnMyCatAndYouDie, transfer_amount, fart);
+    }
+
+    @Override
+    public String toString() {
+        return "FortDetails{" +
+                "img=" + img +
+                ", max_moneys=" + max_moneys +
+                ", current_moneys=" + current_moneys +
+                ", iban=" + iban +
+                ", type=" + type +
+                ", overdraft=" + overdraft +
+                ", back_to_bones=" + back_to_bones +
+                ", transfer_the_moneys_to_robber=" + transfer_the_moneys_to_robber +
+                ", iHateGerman=" + iHateGerman +
+                ", stepOnMyCatAndYouDie=" + stepOnMyCatAndYouDie +
+                ", transfer_amount=" + transfer_amount +
+                ", fart=" + fart +
+                '}';
+    }
 }
